@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Billing</title>
+  <link rel="stylesheet" href="billing.css" />
+<link rel="stylesheet" href="editeprofile.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+<header class="page-header">
+
+  <div class="search-box">
+    <i class="bi bi-search search-icon"></i>
+    <input type="text" id="productSearch" placeholder="Search products..." />
+  </div>
+</header>
+
+
+  <!-- ✅ Main Content -->
+  <div class="container">
+    <!-- ✅ Categories Sidebar -->
+    <div class="category-panel">
+      <h2>Categories</h2>
+      <ul id="billing-category-list"></ul>
+            <div class="nav-buttons">
+  <button onclick="location.href='billing.html'" class="nav-btn">
+    <i class="bi bi-receipt"></i> Billing
+  </button>
+  <button onclick="location.href='catalogue.html'" class="nav-btn">
+    <i class="bi bi-box-seam"></i> Catalogue
+  </button>
+</div>
+    </div>
+
+    <!-- ✅ Products Section -->
+    <div class="product-panel">
+      <h2>Products</h2>
+      <div id="billing-product-cards" class="product-cards"></div>
+    </div>
+  </div>
+<!-- Your billing page content -->
+
+<!-- Your billing page content -->
+
+<!-- Sample product button to add product to cart (you will replace this with your real products list) -->
+<button  " onclick="addToCart({ name: 'Product A', billingPrice: 100 })">Add Product A</button>
+<button " onclick="addToCart({ name: 'Product B', billingPrice: 200 })">Add Product B</button>
+
+<!-- Mini Cart bar fixed at bottom -->
+<!-- Cart Preview (Bottom) -->
+
+
+<div id="cart-preview" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 10px; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); z-index: 999;"> 
+  <div id="cart-items" style="font-size: 14px;"></div>
+  <div style="margin-top: 8px;">
+    <strong>Total: ₹<span id="cart-total">0</span></strong>
+    <button id="go-to-cart" style="float: right; background: black; color: white; border: none; padding: 5px 10px; border-radius: 4px;">Go to Cart</button>
+  </div>
+</div>
+<!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <a href="BUSINESS PROFILE.html" class="nav-item">
+      <i class="bi bi-house"></i><h5>Home</h5>
+  
+    </a>
+    <a href="#" class="nav-item">
+      	<i class="bi bi-graph-up"></i><h5>Report</h5>
+    </a>
+
+     <a href="billing.html" class="new-bill">
+   <i class="bi bi-file-earmark-plus" style="font-size: 30px;"> </i>
+      </a>
+
+      <a href="catalogue.html" class="nav-item">
+    	<i class="bi bi-collection"></i><h5>Catalogue</h5>
+    </a>
+    <a href="#" class="nav-item">
+   	<i class="bi bi-person-circle"></i><h5>Account</h5>
+ 
+    </div>
+
+<script src="billing.js"></script>
+
+
+  <!-- ✅ Scripts -->
+
+</body>
+
+
+
+
+
+      <script src="synz.js"></script>
+  <script src="billing.js"></script>
+   <script src="catagoty.js"></script>
+  <script src="search.js"></script>
+  <script src="editProduct.js"></script>
+  <script src="cart.js"></script>
+  <script src="editeprofile.css"></script>
+</html>
+
+
+

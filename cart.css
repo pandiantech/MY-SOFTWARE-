@@ -1,0 +1,273 @@
+/* === IMPORT FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: #fffbea;
+  color: #222;
+  padding: 0;
+  margin: 0;
+}
+
+/* === HEADER === */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f6c700;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .back-btn {
+  font-size: 20px;
+  background: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+  margin-right: 20px;
+}
+
+.header .back-btn:hover {
+  transform: scale(1.1);
+}
+
+.header .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  text-align: center;
+}
+
+.invoice-date {
+  border: 1px solid #ccc;
+  min-width: 40px;
+  margin-left: 20px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* === SECTIONS === */
+section {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* === CART LIST === */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* === CUSTOMER & CHARGES === */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+/* === GST TOGGLE === */
+.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #f6c700;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.label-text {
+  font-size: 14px;
+  color: #444;
+}
+
+.gst-inputs label {
+  margin-bottom: 8px;
+}
+
+.hide {
+  display: none;
+}
+
+/* === FOOTER === */
+.footer {
+  position: sticky;
+  bottom: 0;
+  background: #fffacd;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.total-amount-container {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 70px;
+}
+
+.remove-btn{
+  background: #998a8a;
+  margin-top: 10px;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+}
+.btn-group button  {
+  background: #f6c700;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-group button:hover {
+  background: #ffde33;
+  transform: scale(1.05);
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  float: right;
+  font-size: 18px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  .header .title {
+    font-size: 18px;
+  }
+
+  .btn-group button {
+    flex: 1 1 45%;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}

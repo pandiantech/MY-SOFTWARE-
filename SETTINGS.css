@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: auto;
+ 
+}
+
+
+
+.main-container {
+  background: #fafafa;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  max-width: 500px;
+  width: auto;
+}
+
+
+
+.button-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nav-button {
+  
+  color: rgb(95, 94, 94);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #00ff11;
+  transform: scale(1.05);
+}

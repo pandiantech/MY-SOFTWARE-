@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="editeprofile.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+</head>
+<body onload="loadForm()">
+
+  <div class="edit-container">
+    <h2>Edit Business Profile</h2>
+    <form onsubmit="saveProfile(event)">
+      <label>Business Name</label>
+      <input type="text" id="businessNameInput" required>
+
+      <label>Contact</label>
+      <input type="text" id="contactInput" required>
+
+      <label>Address</label>
+      <textarea id="addressInput" required></textarea>
+
+      <label>Logo URL</label>
+      <input type="text" id="logoInput" placeholder="https://example.com/logo.png">
+
+      <button type="submit">Save</button>
+    </form>
+  </div>
+
+<script src="editprofile.js"></script>
+</body>
+</html>
