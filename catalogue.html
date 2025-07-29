@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catalogue</title>
+  <link rel="stylesheet" href="catalogue.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="editeprofile.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <header class="page-header">
+  
+  
+  <div class="search-box">
+    <i class="bi bi-search search-icon"></i>
+    <input type="text" id="productSearch" placeholder="Search products..." />
+  </div>
+</header>
+  <div class="container">
+    <!-- === Left Category Panel === -->
+    <div class="category-panel">
+      <h2>Categories</h2>
+      <button  class="cat-btn" onclick="addCategory()">Add Category</button>
+      <button  class="cat-btn" onclick="removeSelectedCategory()">Remove Selected</button>
+      <button  class="cat-btn" onclick="showAllProducts()">All Products</button>
+      <ul class="cat-list"  id="category-list"></ul>
+      <div class="nav-buttons">
+  <button onclick="location.href='billing.html'" class="nav-btn">
+    <i class="bi bi-receipt"></i> Billing
+  </button>
+  <button onclick="location.href='catalogue.html'" class="nav-btn">
+    <i class="bi bi-box-seam"></i> Catalogue
+  </button>
+</div>
+
+    </div>
+ <ul class="cat-list"  id="category-list"></ul>
+    <!-- === Right Product Section === -->
+    <div class="product-panel">
+      <h2>Products</h2>            
+
+      <!-- Product Form -->
+      <form id="product-form">
+  <input type="text" id="product-name" placeholder="Product Name" required />
+  <input type="number" id="product-stock" placeholder="Stock" required />
+  <input type="number" id="billing-price" placeholder="Billing Price" required />
+  <input type="number" id="purchase-price" placeholder="Purchase Price" required />
+  <input class="inputbtn" type="file" id="product-image" accept="image/*" required />
+  <button type="submit">Add Product</button>
+</form>
+
+
+      <!-- Product Cards -->
+      <div id="product-cards" class="product-cards"></div>
+    </div>
+  </div>
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <a href="BUSINESS PROFILE.html" class="nav-item">
+      <i class="bi bi-house"></i><h5>Home</h5>
+  
+    </a>
+    <a href="#" class="nav-item">
+      	<i class="bi bi-graph-up"></i><h5>Report</h5>
+    </a>
+
+     <a href="billing.html" class="new-bill">
+   <i class="bi bi-file-earmark-plus" style="font-size: 30px;"> </i>
+      </a>
+
+      <a href="catalogue.html" class="nav-item">
+    	<i class="bi bi-collection"></i><h5>Catalogue</h5>
+    </a>
+    <a href="#" class="nav-item">
+   	<i class="bi bi-person-circle"></i><h5>Account</h5>
+ 
+    </div>
+
+    
+ 
+  <script src="catagoty.js"></script>
+  <script src="catalogue.js"></script>
+  <script src="synz.js"></script>
+   <script src="search.js"></script>
+   
+</body>
+</html>

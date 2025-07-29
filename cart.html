@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cart & Invoice - Pandian Tech Service</title>
+<link rel="stylesheet" href="cart.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link rel="stylesheet" href="editeprofile.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+<header class="header">
+  <button class="back-btn" onclick="goBack()" aria-label="Back">&#8592;</button>
+  <h1 class="title">Cart & Invoice</h1>
+  <input type="date" id="invoice-date" class="invoice-date" />
+</header>
+
+<main class="main-content">
+  <section class="cart-section">
+    <h2>Added Products</h2>
+    <div id="cart-list" class="cart-list">
+      <!-- Product boxes will be rendered here -->
+    </div>
+  </section>
+
+  <section class="gst-section">
+    <label class="switch">
+      <input type="checkbox" id="gst-toggle" />
+      <span class="slider round"></span>
+      <span class="label-text">Include GST</span>
+    </label>
+
+    <div id="gst-inputs" class="gst-inputs hide">
+      <label>CGST % <input type="number" id="cgst" min="0" max="100" step="0.01" value="placeholder" /></label>
+      <label>SGST % <input type="number" id="sgst" min="0" max="100" step="0.01" value="placeholder" /></label>
+      <label>IGST % <input type="number" id="igst" min="0" max="100" step="0.01" value="placeholder" /></label>
+      <label>UTGST % <input type="number" id="utgst" min="0" max="100" step="0.01" value="placeholder" /></label>
+    </div>
+  </section>
+
+  <section class="customer-section">
+    <h2>Customer Details</h2>
+    <label>Name: <input type="text" id="cust-name" placeholder="Customer Name" /></label>
+    <label>Phone: <input type="tel" id="cust-number" placeholder="Phone Number" /></label>
+    <label>Payment Method:
+      <select id="payment-method">
+        <option value="Cash">Cash</option>
+        <option value="UPI">UPI</option>
+        <option value="Card">Card</option>
+        <option value="Credit">Credit</option>
+      </select>
+    </label>
+  </section>
+
+  <section class="charges-section">
+    <label>Discount (₹): <input type="number" id="discount" min="0" step="0.01" value="0" /></label>
+    <label>Other Charges (₹): <input type="number" id="other-charges" min="0" step="0.01" value="0" /></label>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="total-amount-container">Total: ₹<span id="total-amount">0.00</span></div>
+  <div class="btn-group">
+    <button onclick="printInvoice()">Print</button>
+    <button onclick="previewInvoice()">Preview</button>
+    <button onclick="saveInvoice()">Save PDF</button>
+    <button onclick="shareInvoice()">Share WhatsApp</button>
+  </div>
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <a href="BUSINESS PROFILE.html" class="nav-item">
+      <i class="bi bi-house"></i><h5>Home</h5>
+  
+    </a>
+    <a href="#" class="nav-item">
+      	<i class="bi bi-graph-up"></i><h5>Report</h5>
+    </a>
+
+     <a href="billing.html" class="new-bill">
+   <i class="bi bi-file-earmark-plus" style="font-size: 30px;"> </i>
+      </a>
+
+      <a href="catalogue.html" class="nav-item">
+    	<i class="bi bi-collection"></i><h5>Catalogue</h5>
+    </a>
+    <a href="#" class="nav-item">
+   	<i class="bi bi-person-circle"></i><h5>Account</h5>
+ 
+    </div>
+</footer>
+
+<!-- Modal Preview -->
+<div id="invoice-modal" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" id="close-preview" aria-label="Close Preview">&times;</button>
+    <div id="invoice-preview-content"></div>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+
+
+
+</html>
